@@ -1,7 +1,33 @@
+
+@media only screen and (max-width: 768px){
+    /*For small screens*/
+}
+
+@media only screen and (min-width: 768px){
+    /*For medium screens*/
+    .asideButton{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 1080px){
+    /*For desktop screens*/
+    .asideButton{
+        visibility: hidden;
+    }
+
+}
+
+
 #rightAsideHeader{
+    /*set the colour to white*/
     color: #ffffff;
 }
 
-.genericHeader {
-}
+/*header{
+    background-color: #0282ff;
+    text-align: center;
+}*/
+
+
 
