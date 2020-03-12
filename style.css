@@ -2,14 +2,21 @@ body{
     margin: 0;
 }
 
+.asideHeader{
+    /*align-self: center;*/
+    text-align: center;
+    color: #ffffff;
+}
+
 @media only screen and (max-width: 768px){
     /*For small screens*/
     .container{
         display:grid;
-
         /*set the columns and rows for the grid*/
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 20% 300px 300px auto;
+        grid-template-rows: 15% 35% 35% 15%;
+        height: 100vh;
+
     }
     header{
         grid-column-start: 1;
@@ -20,25 +27,51 @@ body{
         text-align: center;
         background-color: #0282ff;
     }
-    .genericHeader{
-        grid-column-start: 2;
-        grid-column-end: 4;
+   #leftAside{
+       position: fixed;
+       transform: translateX(-99%);
+       width: 50%;
+       height: 100%;
+       background-color: #000000;
     }
-
+    #rightAside{
+        position: fixed;
+        right:0;
+        transform: translateX(99%);
+        width: 50%;
+        height: 100%;
+        background-color: #000000;
+    }
+    #leftAsideButton{
+        position: absolute;
+        top: 5%;
+        left: 5%
+     }
+    #rightAsideButton{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+    main{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end:4;
+        background-color: #ff7f24;
+        text-align: center;
+    }
+    footer{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end:5;
+        background-color: #0282ff;
+        text-align: center;
+    }
 }
 
-/*@media only screen and (min-width: 768px){
-    /*For medium screens
-    .asideButton{
-        visibility: hidden;
-    }
-    .container{
-
-    }
-}*/
-
 /*1080px - large screens*/
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px){
     /*For desktop screens*/
     .asideButton{
         visibility: hidden;
@@ -49,7 +82,8 @@ body{
 
         /*set the columns and rows for the grid*/
         grid-template-columns: 10% 10% 30% 30% 10% 10%;
-        grid-template-rows: 15% 500px 500px 15%;
+        grid-template-rows: 15% 35% 35% 15%;
+        height: 100vh;
     }
     header{
         grid-column-start: 1;
@@ -96,16 +130,8 @@ body{
     }
 }
 
-.asideHeader{
-    /*align-self: center;*/
-    text-align: center;
-    color: #ffffff;
-}
 
-/*header{
-    background-color: #0282ff;
-    text-align: center;
-}*/
+
 
 
 
