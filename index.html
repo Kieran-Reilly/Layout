@@ -12,22 +12,25 @@
 <body>
     <div class="container">
         <header>
-            <button id="leftAsideButton" class="asideButton">Left Aside</button>
+            <button id="leftAsideButton" class="asideButton" onclick="leftAsideOpenTransition()">Left Aside</button>
             <h1 class="genericHeader">Header</h1>
-            <button id="rightAsideButton" class="asideButton">Right Aside</button>
+            <button id="rightAsideButton" class="asideButton" onclick="rightAsideOpenTransition()">Right Aside</button>
         </header>
         <aside id="leftAside">
             <h1 class="asideHeader">Aside</h1>
+            <button id="leftAsideCloseButton" class="asideCloseButton" onclick="leftAsideCloseTransition()">Close</button>
         </aside>
         <main>
             <h1 class="genericHeader">Main</h1>
         </main>
         <aside id="rightAside">
             <h1 class="asideHeader">Aside</h1>
+            <button id="rightAsideCloseButton" class="asideCloseButton" onclick="rightAsideCloseTransition()">Close</button>
         </aside>
         <footer>
             <h1 class="genericHeader">Footer</h1>
         </footer>
-    </div>
+
+        <script src="AsideTransition.js"></script>
 </body>
 </html>
