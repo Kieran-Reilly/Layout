@@ -19,8 +19,6 @@ body{
         /*set the columns and rows for the grid*/
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 15% 35% 35% 15%;
-
-
     }
     header{
         grid-column-start: 1;
@@ -36,7 +34,7 @@ body{
        width: 50%;
        height: 100%;
        background-color: #000000;
-       transition: 0.5s;
+       transition: 0s;
     }
     #rightAside{
         position: fixed;
@@ -45,7 +43,7 @@ body{
         width: 50%;
         height: 100%;
         background-color: #000000;
-        transition: 0.5s;
+        transition: 0s;
     }
     #leftAsideButton, #leftAsideCloseButton{
         position: absolute;
