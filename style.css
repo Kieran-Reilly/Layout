@@ -5,93 +5,82 @@ body{
     height: 100vh;
 }
 
-.asideHeader{
+aside{
     /*align-self: center;*/
     text-align: center;
     color: #ffffff;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 400px){
     /*For small screens*/
-    .container{
+    body{
         display:grid;
-        height: 100vh;
         /*set the columns and rows for the grid*/
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 15% 35% 35% 15%;
-
-
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 20% 60% 20%;
     }
     header{
         grid-column-start: 1;
-        grid-column-end: 5;
+        grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end:2;
         text-align: center;
         background-color: #0282ff;
     }
-   #leftAside{
-       position: fixed;
-       transform: translateX(-99%);
-       width: 50%;
-       height: 100%;
-       background-color: #000000;
-       transition: 0.5s;
-    }
-    #rightAside{
-        position: fixed;
-        right: 0;
-        transform: translateX(99%);
-        width: 50%;
-        height: 100%;
-        background-color: #000000;
-        transition: 0.5s;
-    }
-    #leftAsideButton, #leftAsideCloseButton{
-        position: absolute;
-        top: 5%;
-        left: 5%;
-     }
-    #rightAsideButton, #rightAsideCloseButton{
-        position: absolute;
-        top: 5%;
-        right: 5%;
-    }
     main{
         grid-column-start: 1;
-        grid-column-end: 5;
+        grid-column-end: 3;
         grid-row-start: 2;
-        grid-row-end:4;
+        grid-row-end:3;
         background-color: #ff7f24;
         text-align: center;
     }
     footer{
         grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 4;
-        grid-row-end:5;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end:4;
         background-color: #0282ff;
         text-align: center;
     }
+    #leftAside{
+        width: 50%;
+        height: 100%;
+        background-color: #000000;
+        transition: 0.5s;
+    }
+    #leftAside[data-closed="true"]{
+        position: fixed;
+        left:-49%;
+    }
+    #leftAside[data-closed="false"]{
+        position: fixed;
+        left:0%;
+    }
+    #rightAside{
+        width: 50%;
+        height: 100%;
+        background-color: #000000;
+        transition: 0.5s;
+    }
+    #rightAside[data-closed="true"]{
+        position: fixed;
+        right:-49%;
+    }
+    #rightAside[data-closed="false"]{
+        position: fixed;
+        right:0%;
+    }
 }
 
-/*1080px - large screens*/
-@media only screen and (min-width: 769px){
-    /*For desktop screens*/
-    .asideButton{
-        visibility: hidden;
-    }
-    .asideCloseButton{
-        visibility: hidden;
-    }
-    .container{
+@media only screen and (min-width: 401px){
+    /*For non-mobile screens*/
+    body{
         /*"Initialize" the grid*/
         display:grid;
-        height: 100vh;
         /*set the columns and rows for the grid*/
         grid-template-columns: 10% 10% 30% 30% 10% 10%;
         grid-template-rows: 15% 35% 35% 15%;
-
     }
     header{
         grid-column-start: 1;

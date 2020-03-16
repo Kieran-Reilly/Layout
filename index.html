@@ -3,34 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- content="user-scalable=no," | ensures the page is accessible? TEST-->
+          content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" rel="stylesheet">
     <title>Layout Project</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <button id="leftAsideButton" class="asideButton" onclick="leftAsideOpenTransition()">Left Aside</button>
-            <h1 class="genericHeader">Header</h1>
-            <button id="rightAsideButton" class="asideButton" onclick="rightAsideOpenTransition()">Right Aside</button>
-        </header>
-        <aside id="leftAside">
-            <h1 class="asideHeader">Aside</h1>
-            <button id="leftAsideCloseButton" class="asideCloseButton" onclick="leftAsideCloseTransition()">Close</button>
-        </aside>
-        <main>
-            <h1 class="genericHeader">Main</h1>
-        </main>
-        <aside id="rightAside">
-            <h1 class="asideHeader">Aside</h1>
-            <button id="rightAsideCloseButton" class="asideCloseButton" onclick="rightAsideCloseTransition()">Close</button>
-        </aside>
-        <footer>
-            <h1 class="genericHeader">Footer</h1>
-        </footer>
-
-        <script src="AsideTransition.js"></script>
+    <header>Header</header>
+    <aside id="leftAside" data-closed="true">Aside</aside>
+    <main>Main</main>
+    <aside id="rightAside" data-closed="true">Aside</aside>
+    <footer>Footer</footer>
+    <!--<script src="AsideTransition.js"></script>-->
 </body>
 </html>

@@ -1,6 +1,7 @@
 function leftAsideOpenTransition(){
     console.log("leftOpen");
     document.getElementById("leftAside").style.transform = "translateX(0%)";
+
 }
 
 function rightAsideOpenTransition(){
@@ -16,4 +17,10 @@ function leftAsideCloseTransition(){
 function rightAsideCloseTransition(){
     console.log("RightClose");
     document.getElementById("rightAside").style.transform = "translateX(99%)";
+}
+
+function resizeListener() {
+    if(window.outerWidth > 768){
+        document.getElementById("leftAside").setAttribute("style", "none");
+    }
 }
