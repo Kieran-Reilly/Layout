@@ -2,20 +2,32 @@ class AsideViewModel{
 
     contructor(){
         //check if we're in mobile mode
-        //add event listners
+        if(document.querySelector("body").offsetWidth < "401px"){
+            console.log("test");
+        }
+
+        //add event listeners
     }
     dispose(){
-        //dispose of event listners
+        //dispose of event listeners
         //set buttons to null
     }
 
-    //FUNCTIONS
+    //METHODS
+    toggleLeftAside(){
+        //Check value of leftAside "data-closed" data-attribute
+    }
 
-
+    toggleRightAside(){
+        //Check value of rightAside "data-closed" data-attribute
+    }
 
     //GETTERS & SETTERS
     get btnToggleLeftAside(){
         //get leftButton
+        if(this.btnToggleLeftAside == null){
+            this.leftAside = document.querySelector("#leftAside");
+        }
     }
 
     set btnToggleLeftAside(newValue){
